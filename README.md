@@ -22,3 +22,24 @@ https://github.com/aertslab/pycistarget
 https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
 
 ## 2. Data Availability
+### 2.1 Raw fastq files
+NEMO: https://assets.nemoarchive.org/dat-aw6czix
+GEO: 
+
+### 2.2 Processed data
+- Pseudobulk allc files:
+- adata:
+- DMG:
+- DMR:
+- Enriched motif and TF:
+- AB compartments:
+- Domain:
+- Loop:
+
+### 2.3 Spatial data
+
+
+## 3. Tutorial
+### How to normalize the raw methylation fraction
+
+
