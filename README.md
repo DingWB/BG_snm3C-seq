@@ -2,12 +2,12 @@
 
 ## 1. Pipeline
 ### Dumultiplexing and Mapping
-https://github.com/DingWB/cemba_data
+- Local: https://github.com/DingWB/cemba_data
+- Cloud: https://broadinstitute.github.io/warp/docs/Pipelines/snm3C/README
 
 ### Clustering & cell type annotations
-ALLCools: https://github.com/lhqing/ALLCools
-
-Jupyter notebooks: https://github.com/lhqing/wmb2023/tree/main/clustering
+- ALLCools: https://github.com/lhqing/ALLCools
+- Jupyter notebooks: https://github.com/lhqing/wmb2023/tree/main/clustering
 
 ### Integration
 Jupyter notebooks: https://github.com/lhqing/wmb2023/tree/main/integration
@@ -23,8 +23,8 @@ https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
 
 ## 2. Data Availability
 ### 2.1 Raw fastq files
-NEMO: https://assets.nemoarchive.org/dat-aw6czix
-GEO: 
+- NEMO: https://assets.nemoarchive.org/dat-aw6czix
+- GEO: TO-DO
 
 ### 2.2 Processed data
 - Pseudobulk allc files:
