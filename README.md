@@ -1,47 +1,75 @@
-# Chromatin Dynamics and DNA Methylation in Single Cells from Human Basal Ganglia
+# A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia
 
-## 1. Pipeline
-### Dumultiplexing and Mapping
-- Local: https://github.com/DingWB/cemba_data
-- Cloud: https://broadinstitute.github.io/warp/docs/Pipelines/snm3C/README
+## 1. Data Availability
+### Raw fastq files
+The raw fastq files (plate-level, before demultiplex)  are available at:
+- NEMO: https://assets.nemoarchive.org/dat-aw6czix; 
+- FTP site: (https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/)
 
-### Clustering & cell type annotations
-- ALLCools: https://github.com/lhqing/ALLCools
-- Jupyter notebooks: https://github.com/lhqing/wmb2023/tree/main/clustering
+### cell-level fastq
+Cell-level fastq files (after demultiplex) can be downloaded from GEO with accession ID: 
 
-### Integration
-Jupyter notebooks: https://github.com/lhqing/wmb2023/tree/main/integration
+### Spatial data
+MERFISH transcriptomic data are available on BIL
 
-### Call DMR
-https://github.com/lhqing/ALLCools
+### bigwig files
+bigwig files are available for download on [basal ganglia epigenomic portal](https://basalganglia.epigenomes.net/)
 
-### Motif enrichment
-https://github.com/aertslab/pycistarget
+### Processed data
+Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
+#### GEO
+- Pseudobulk allc files (Group level): GEO
+- HiC contact files (single-cell level): GEO
 
-### ABC Model
-https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
+#### Figshare
+- Pseudobulk allc files (Subclass level CG+CH): folder Subclass.allc
+- adata: folder adata
+- DMG: folder DMG
+- DMR: folder DMR
+- Enriched motif and TF: folder motif
+- Normalized compartment scores across cell types at subclass level: HiC/NormalizedCompartmentScores.tsv
+- Diff domain doundary: HiC/diff_boundary.tsv
+- Loop at Subclass and Group levels: folder HiC/Subclass.loop and HiC/Group.loop
+- Enhancer-Promoter Links: supplementary_tables/TableS7.enhancer_promoter_links.tsv
+- TF-Target gene pairs: supplementary_tables/TableS8.Subclass.GRN.xlsx
+- Supplementary Tables (for the manuscript): folder supplementary_tables
 
-## 2. Data Availability
-### 2.1 Raw fastq files
-- NEMO: https://assets.nemoarchive.org/dat-aw6czix
-- GEO: TO-DO
+## 2. Mapping Pipeline
+If you prefer to process the data from fastq files, please run dumultiplexing and mapping using our mapping pipeline:
+- Local (or Google Cloud) snakemake pipeline: https://github.com/DingWB/cemba_data
+- Broad WDL pipeline: https://broadinstitute.github.io/warp/docs/Pipelines/snm3C/README
 
-### 2.2 Processed data
-- Pseudobulk allc files:
-- adata:
-- DMG:
-- DMR:
-- Enriched motif and TF:
-- AB compartments:
-- Domain:
-- Loop:
-- Enhancer-Promoter Links:
-- TF-Target gene pairs:
+### 3. Code and jupyter notebooks for clustering, cell type annotations and downstream analysis
+- Clustering: See [clustering folder](clustering/)
+- Integration between snm3C-seq & sc-RNA: See [integration folder](integration/)
+- Call DMR: https://github.com/lhqing/ALLCools
+- Motif enrichment: [motif_enrichment folder](motif_enrichment/)
+- ABC Model: https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
 
-### 2.3 Spatial data
+## 4. FAQ
+### How to normalize the raw methylation fraction?
+```python
+import os,sys
+import pandas as pd
+import anndata
 
-
-## 3. Tutorial
-### How to normalize the raw methylation fraction
-
+adata_path="BG.gene-CHN.h5ad" # example adata path
+gene="DRD2" # an example gene
+clip_norm_value=10
+raw_adata = anndata.read_h5ad(os.path.expanduser(adata_path), backed='r')
+adata = raw_adata[:, gene].to_memory()
+raw_adata.file.close()
+cols = adata.obs.columns.tolist()
+if 'prior_mean' in cols:
+    na_sum = adata.to_df().isna().sum().sum()
+    adata.X = adata.X / adata.obs.prior_mean.values[:, None]  # range = [0,1,10]
+    if not clip_norm_value is None:
+        if issparse(adata.X):
+            X=adata.X.toarray()
+        else:
+            X=adata.X
+        adata.X = np.clip(X, None, clip_norm_value)
+    adata.uns['normalize_per_cell'] = True
+adata
+```
 
