@@ -1,21 +1,21 @@
 # A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia
 
 ## 1. Data Availability
-### Raw fastq files
-The raw fastq files (plate-level, before demultiplex)  are available at:
+### 1.1 Raw fastq files
+The raw fastq files (plate-level, before demultiplexing)  are available at:
 - NEMO: https://assets.nemoarchive.org/dat-aw6czix; 
-- FTP site: (https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/)
+- FTP site: https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/
 
-### cell-level fastq
+### 1.2 cell-level fastq
 Cell-level fastq files (after demultiplex) can be downloaded from GEO with accession ID: 
 
-### Spatial data
+### 1.3 Spatial data
 MERFISH transcriptomic data are available on BIL
 
-### bigwig files
-bigwig files are available for download on [basal ganglia epigenomic portal](https://basalganglia.epigenomes.net/)
+### 1.4 bigwig files
+bigwig files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
 
-### Processed data
+### 1.5 Processed data
 Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
 #### GEO
 - Pseudobulk allc files (Group level): GEO
@@ -46,7 +46,13 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - Motif enrichment: [motif_enrichment folder](motif_enrichment/)
 - ABC Model: https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
 
-## 4. FAQ
+### 4. Data exploration & visualization
+- (1) Basal Ganglia Epigenome Browser: https://basalganglia.epigenomes.net/
+- (2) Human Basal Ganglia (HBG) Anno-J Networked Genome Browser: https://neomorph.salk.edu/hbg/hbg.php
+
+### 5. Citation
+
+## 6. FAQ
 ### How to normalize the raw methylation fraction?
 ```python
 import os,sys
