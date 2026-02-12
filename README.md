@@ -10,7 +10,7 @@ The raw fastq files (plate-level, before demultiplexing)  are available at:
 Cell-level fastq files (after demultiplex) can be downloaded from GEO with accession ID: 
 
 ### 1.3 Spatial data
-MERFISH transcriptomic data are available on [BIL](https://doi.org/10.35077/g.1194) soon
+MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
 
 ### 1.4 bigwig files
 bigwig files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
@@ -21,7 +21,7 @@ Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figsh
 - Pseudobulk allc files (Group level): GEO
 - HiC contact files (single-cell level): GEO
 
-#### Figshare
+#### Figshare (uploading)
 - Pseudobulk allc files (Subclass level CG+CH): folder Subclass.allc
 - adata: folder adata
 - DMG: folder DMG
@@ -52,6 +52,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - (2) Human Basal Ganglia (HBG) Anno-J Networked Genome Browser: https://neomorph.salk.edu/hbg/hbg.php
 
 ### 5. Citation
+
 
 ## 6. FAQ
 ### How to normalize the raw methylation fraction?
