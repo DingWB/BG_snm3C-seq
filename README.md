@@ -10,7 +10,7 @@ The raw fastq files (plate-level, before demultiplexing)  are available at:
 Cell-level fastq files (after demultiplex) can be downloaded from GEO with accession ID: 
 
 ### 1.3 Spatial data
-MERFISH transcriptomic data are available on BIL
+MERFISH transcriptomic data are available on [BIL](https://doi.org/10.35077/g.1194) soon
 
 ### 1.4 bigwig files
 bigwig files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
@@ -45,6 +45,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - Call DMR: https://github.com/lhqing/ALLCools
 - Motif enrichment: [motif_enrichment folder](motif_enrichment/)
 - ABC Model: https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
+- Spatial Transcriptomics Data Analysis: https://github.com/a3klein/BG_snm3c-seq_MERFISH
 
 ### 4. Data exploration & visualization
 - (1) Basal Ganglia Epigenome Browser: https://basalganglia.epigenomes.net/
