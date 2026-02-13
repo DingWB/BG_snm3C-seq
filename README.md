@@ -46,6 +46,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - Motif enrichment: [motif_enrichment folder](motif_enrichment/)
 - ABC Model: https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
 - Spatial Transcriptomics Data Analysis: https://github.com/a3klein/BG_snm3c-seq_MERFISH
+- LDSC: https://github.com/rosanwang/ldsc-wrapper
 
 ### 4. Data exploration & visualization
 - (1) Basal Ganglia Epigenome Browser: https://basalganglia.epigenomes.net/
