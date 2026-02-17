@@ -53,7 +53,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - (2) Human Basal Ganglia (HBG) Anno-J Networked Genome Browser: https://neomorph.salk.edu/hbg/hbg.php
 
 ### 5. Citation
-Ding, W., Klein, A., Baez-Becerra, C. T., Rink, J. A., Bartlett, A., Zeng, Q., ... & Ecker, J. R. (2026). A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia. bioRxiv, 2026-02.
+Ding, W., Klein, A., Baez-Becerra, C. T., Rink, J. A., Bartlett, A., Zeng, Q., ... & Ecker, J. R. (2026). [A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia](https://www.biorxiv.org/content/10.64898/2026.02.12.705594v1). bioRxiv, 2026-02.
 
 ## 6. FAQ
 ### How to normalize the raw methylation fraction?
