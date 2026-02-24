@@ -7,7 +7,7 @@ The raw fastq files (plate-level, before demultiplexing)  are available at:
 - FTP site: https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/
 
 ### 1.2 cell-level fastq
-Cell-level fastq files (after demultiplex) can be downloaded from GEO with accession ID [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293)
+Cell-level fastq files (after demultiplexing) can be downloaded from GEO with accession ID [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293)
 
 ### 1.3 Spatial data
 MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
