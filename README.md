@@ -12,8 +12,8 @@ Cell-level fastq files (after demultiplexing) can be downloaded from GEO with ac
 ### 1.3 Spatial data
 MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
 
-### 1.4 bigwig files
-bigwig files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
+### 1.4 bigwig & hic files
+bigwig and hic files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
 
 ### 1.5 Processed data
 Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
