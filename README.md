@@ -17,9 +17,10 @@ bigwig files are available for download on [Basal Ganglia Epigenome Browser](htt
 
 ### 1.5 Processed data
 Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
-#### GEO
-- Pseudobulk allc files (Group level): GEO
-- HiC contact files (single-cell level): GEO
+#### GEO: [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293)
+- Pseudobulk allc files (Group level)
+- HiC contact files (single-cell level)
+- Single-cell level fastq files (To-Do)
 
 #### Figshare (uploading)
 - Pseudobulk allc files (Subclass level CG+CH): folder Subclass.allc
