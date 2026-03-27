@@ -44,7 +44,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 - Integration between snm3C-seq & sc-RNA: See [integration folder](integration/)
 - Call DMR: https://github.com/lhqing/ALLCools
 - Motif enrichment: [motif_enrichment folder](motif_enrichment/)
-- ABC Model: https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction/tree/main
+- ABC Model: [ABC folder](ABC/)
 - Spatial Transcriptomics Data Analysis: https://github.com/a3klein/BG_snm3c-seq_MERFISH
 - LDSC: https://github.com/rosanwang/ldsc-wrapper
 
