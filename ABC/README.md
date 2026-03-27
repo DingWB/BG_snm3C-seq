@@ -2,8 +2,11 @@ We applied the Activity-by-Contact (ABC) model (https://github.com/broadinstitut
 
 ## Setup enrivonment & download package
 The original repo from broad institute:
+
 https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction
+
 Or:
+
 https://github.com/DingWB/ABC
 
 ## config.yaml
