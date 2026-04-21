@@ -12,8 +12,8 @@ Cell-level fastq files (after demultiplexing) can be downloaded from GEO with ac
 ### 1.3 Spatial data
 MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
 
-### 1.4 bigwig & hic files
-bigwig and hic files are available for download on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/)
+### 1.4 bigwig, hic files & track files
+bigwig, hic files and other track files can be visualized on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/) or downloaded from [FTP site](https://epigenome.wustl.edu/basal-ganglia-epigenome/tracks/eckerlab/)
 
 ### 1.5 Processed data
 Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
@@ -23,16 +23,16 @@ Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figsh
 
 #### Figshare (uploading)
 - Pseudobulk allc files (Subclass level CG+CH): folder Subclass.allc
-- adata: folder adata
-- DMG: folder DMG
-- DMR: folder DMR
-- Enriched motif and TF: folder motif
-- Normalized compartment scores across cell types at subclass level: HiC/NormalizedCompartmentScores.tsv
-- Diff domain doundary: HiC/diff_boundary.tsv
-- Loop at Subclass and Group levels: folder HiC/Subclass.loop and HiC/Group.loop
-- Enhancer-Promoter Links: supplementary_tables/TableS7.enhancer_promoter_links.tsv
-- TF-Target gene pairs: supplementary_tables/TableS8.Subclass.GRN.xlsx
-- Supplementary Tables (for the manuscript): folder supplementary_tables
+- adata: folder `adata`
+- DMG: folder `DMG`
+- DMR: folder `DMR`
+- Enriched motif and TF: folder `motif`
+- Normalized compartment scores across cell types at subclass level: `HiC/NormalizedCompartmentScores.tsv`
+- Diff domain doundary: `HiC/diff_boundary.tsv`
+- Loop at Subclass and Group levels: folder `HiC/Subclass.loop` and `HiC/Group.loop`
+- Enhancer-Promoter Links: `supplementary_tables/TableS7.enhancer_promoter_links.tsv`
+- TF-Target gene pairs: `supplementary_tables/TableS8.Subclass.GRN.xlsx`
+- Supplementary Tables (for the manuscript): folder `supplementary_tables`
 
 ## 2. Mapping Pipeline
 If you prefer to process the data from fastq files, please run dumultiplexing and mapping using our mapping pipeline:
@@ -51,6 +51,7 @@ If you prefer to process the data from fastq files, please run dumultiplexing an
 ### 4. Data exploration & visualization
 - (1) Basal Ganglia Epigenome Browser: https://basalganglia.epigenomes.net/
 - (2) Human Basal Ganglia (HBG) Anno-J Networked Genome Browser: https://neomorph.salk.edu/hbg/hbg.php
+- (3) Single-cell UMAP, boxplot, dot heatmap and Multiomic track view: https://neomorph.salk.edu/SCMDAP/BasalGanglia
 
 ### 5. Citation
 Ding, W., Klein, A., Baez-Becerra, C. T., Rink, J. A., Bartlett, A., Zeng, Q., ... & Ecker, J. R. (2026). [A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia](https://www.biorxiv.org/content/10.64898/2026.02.12.705594v1). bioRxiv, 2026-02.
