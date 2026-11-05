@@ -1,13 +1,14 @@
 # A Multimodal Single-Cell Epigenomic and 3D Genome Atlas of the Human Basal Ganglia
 
 ## 1. Data Availability
+How to download and process the data? See [download.md](download.md)
 ### 1.1 Raw fastq files
 The raw fastq files (plate-level, before demultiplexing)  are available at:
 - NEMO: https://assets.nemoarchive.org/dat-aw6czix; 
 - FTP site: https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/
 
 ### 1.2 cell-level fastq
-Cell-level fastq files (after demultiplexing) can be downloaded from GEO with accession ID [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293)
+Cell-level fastq files (after demultiplexing) can be downloaded from GEO with accession ID [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293) or AWS Open Data: https://registry.opendata.aws/salk-human-brain-snm3C-seq
 
 ### 1.3 Spatial data
 MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
@@ -16,7 +17,7 @@ MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/
 bigwig, hic files and other track files can be visualized on [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/) or downloaded from [FTP site](https://epigenome.wustl.edu/basal-ganglia-epigenome/tracks/eckerlab/)
 
 ### 1.5 Processed data
-Processed data are available on the NCBI Gene Expression Omnibus (GEO) and Figshare
+Processed data are available on the NCBI Gene Expression Omnibus (GEO) and AWS Open Data: https://registry.opendata.aws/salk-human-brain-snm3C-seq
 #### GEO: [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE320293)
 - Pseudobulk allc files (Group level)
 - HiC contact files (single-cell level)
@@ -81,5 +82,35 @@ if 'prior_mean' in cols:
         adata.X = np.clip(X, None, clip_norm_value)
     adata.uns['normalize_per_cell'] = True
 adata
+```
+
+### cell id in metadata does not match the cell id from the mapping pipeline
+The broad mapping pipeline
+```python
+import pandas as pd
+def _parse_cell_id_v2(cell_id):
+	plate, multiplex_group, pcr_index, random_index = cell_id.split('-')
+	# 384 pos
+	col384 = int(random_index[1:]) - 1
+	row384 = ord(random_index[0]) - 65  # convert A-P to 0-23
+	resolved_multiplex_group=(col384 % 12) // 2 + 1 if 'unknow' not in random_index.lower() else 'NA'
+	uid=plate+'-'+str(resolved_multiplex_group)+'-'+pcr_index
+	new_cell_id = uid + '-' + random_index
+	record = pd.Series({
+		'new_cell_id':new_cell_id,
+		'Plate': plate,
+		'PCRIndex': pcr_index,
+		'MultiplexGroup': multiplex_group,
+		'ResolvedMultiplexGroup': resolved_multiplex_group,
+		'RandomIndex': random_index,
+		'Col384': col384,
+		'Row384': row384
+	})
+	return record
+
+metadata=pd.read_csv("annotations.tsv",sep='\t',index_col=0)
+cell_ids=metadata.index.tolist()
+plate_info = pd.DataFrame([_parse_cell_id_v2(cell_id) for cell_id in cell_ids],index=cell_ids)
+# use new_cell_id
 ```
 
