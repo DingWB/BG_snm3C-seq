@@ -9,16 +9,16 @@ The raw FASTQ files (plate-level, before demultiplexing) are available at:
 - FTP site: https://data.nemoarchive.org/bican/grant/BICAN_Mul_PN_Human/salk_ecker/epigenome/nuclei/m3C_seq/human/demultiplexed_fastq/
 
 ### 1.2 Cell-level FASTQ files
-Cell-level FASTQ files (after demultiplexing) can be downloaded from GEO under accession [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320293) or from [AWS Open Data](https://registry.opendata.aws/salk-human-brain-snm3C-seq).
+Cell-level FASTQ files (after demultiplexing) can be downloaded from GEO under accession [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320293) or from [AWS Open Data](https://registry.opendata.aws/salk-human-brain-snm3c-seq).
 
 ### 1.3 Spatial data
-MERFISH transcriptomic data will be available on [BIL](https://doi.org/10.35077/g.1194) soon
+MERFISH transcriptomic data is available on [BIL](https://doi.org/10.35077/g.1194)
 
 ### 1.4 BigWig, Hi-C, and track files
 BigWig, Hi-C, and other track files can be visualized on the [Basal Ganglia Epigenome Browser](https://basalganglia.epigenomes.net/) or downloaded from the [FTP site](https://epigenome.wustl.edu/basal-ganglia-epigenome/tracks/eckerlab/).
 
 ### 1.5 Processed data
-Processed data are available through the NCBI Gene Expression Omnibus (GEO) and [AWS Open Data](https://registry.opendata.aws/salk-human-brain-snm3C-seq).
+Processed data are available through the NCBI Gene Expression Omnibus (GEO) and [AWS Open Data](https://registry.opendata.aws/salk-human-brain-snm3c-seq).
 #### GEO: [GSE320293](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320293)
 - Pseudobulk allc files (Group level)
 - HiC contact files (single-cell level)
