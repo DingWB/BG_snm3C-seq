@@ -33,6 +33,7 @@ Processed data are available through the NCBI Gene Expression Omnibus (GEO) and 
 - loop.Q.cool: imputed 3D genome contact files in cool format at 10-kb resolution
 - h5ad: AnnData files containing gene expression, 100-kb mCG and mCH, and 100- and 25-kb 3D genome embeddings
 - ABC: enhancer-promoter links predicted by the ABC model
+- loop.bedpe: per cell type chromatin loop
 
 ## 2. Mapping Pipeline
 To process the FASTQ files, run demultiplexing and mapping using one of these pipelines:
